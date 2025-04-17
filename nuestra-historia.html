@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Historia ❤️ - Galería Especial</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #9370DB, #D8BFD8);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            background-color: rgba(100, 50, 180, 0.8);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .nav-link {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-link.active {
+            background-color: white;
+            color: #8A2BE2;
+        }
+
+        .player-container {
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 0 auto 20px;
+            max-width: 400px;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: transparent;
+            height: 400px;
+            perspective: 1000px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .card-front {
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .card-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-back {
+            background: linear-gradient(135deg, #8A2BE2, #9370DB);
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .date {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #6A5ACD;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(100, 50, 180, 0.8);
+            color: white;
+            margin-top: 40px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: white;
+            color: #8A2BE2;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            text-decoration: none;
+            font-size: 24px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .back-to-top:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .bt21-decoration {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        .decoration1 {
+            top: 10%;
+            left: 5%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .decoration2 {
+            top: 20%;
+            right: 5%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .decoration3 {
+            bottom: 15%;
+            left: 10%;
+            animation: float 7s ease-in-out infinite;
+        }
+
+        .decoration4 {
+            bottom: 25%;
+            right: 10%;
+            animation: float 9s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Nuestra Historia</h1>
+        <p>Un viaje cronológico a través de nuestros momentos más especiales 💜</p>
+    </div>
+
+    <div class="navigation">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="nuestra-historia.html" class="nav-link active">Nuestra Historia</a>
+        <a href="tu-ante-mis-ojos.html" class="nav-link">Tú Ante Mis Ojos</a>
+    </div>
+
+    <div class="player-container">
+        <audio id="bgMusic" autoplay loop>
+            <source src="./audio/Yiruma, (이루마) - River Flows in You.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+
+    <div class="gallery-container" id="gallery">
+        <!-- Las tarjetas se generarán con JavaScript -->
+    </div>
+
+    <a href="#" class="back-to-top" title="Volver arriba">↑</a>
+
+    <div class="footer">
+        <p>Hecho con mucho amor para ti 💜 - 2025</p>
+    </div>
+
+    <script>
+        // Cargamos los datos desde el JSON
+        function loadGalleryData() {
+          fetch('memories.json')
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('No se pudo cargar los datos');
+              }
+              return response.json();
+            })
+            .then(data => {
+              createGallery(data);
+            })
+            .catch(error => {
+              console.error('Error cargando los datos:', error);
+              document.getElementById('gallery').innerHTML = 
+                '<div class="error">No se pudieron cargar las imágenes. Por favor recarga la página.</div>';
+            });
+        }
+
+        function createGallery(memoriesData) {
+          const gallery = document.getElementById('gallery');
+          gallery.innerHTML = ''; // Limpiar la galería antes de añadir nuevas tarjetas
+          
+          memoriesData.forEach(memory => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            
+            card.innerHTML = `
+              <div class="card-inner">
+                <div class="card-front">
+                  <span class="date">${memory.date}</span>
+                  <img src="${memory.image}" alt="Recuerdo">
+                </div>
+                <div class="card-back">
+                  <h3>${memory.date}</h3>
+                  <p>${memory.message}</p>
+                </div>
+              </div>
+            `;
+            
+            gallery.appendChild(card);
+          });
+        }
+
+        // Inicializar la galería cuando se cargue la página
+        window.onload = function() {
+          loadGalleryData();
+          
+          // Reproducir música automáticamente
+          const bgMusic = document.getElementById('bgMusic');
+          document.addEventListener('click', () => {
+            bgMusic.play();
+          }, { once: true });
+        };
+    </script>
+</body>
+</html>

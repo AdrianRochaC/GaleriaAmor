@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti ❤️ - Mi Regalo Especial</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #9370DB, #D8BFD8);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 40px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        .nav-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        .nav-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: #6A5ACD;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+        }
+
+        .nav-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .nav-card h2 {
+            margin-top: 0;
+            color: #8A2BE2;
+        }
+
+        .nav-card p {
+            color: #666;
+        }
+
+        .message-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 60px;
+            max-width: 600px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .message-box h2 {
+            color: #8A2BE2;
+            margin-top: 0;
+        }
+
+        .message-box p {
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(100, 50, 180, 0.8);
+            color: white;
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .floating-bt21 {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .bt21-1 {
+            top: 10%;
+            left: 5%;
+            animation: float 7s ease-in-out infinite;
+        }
+
+        .bt21-2 {
+            top: 15%;
+            right: 8%;
+            animation: float 8s ease-in-out infinite 1s;
+        }
+
+        .bt21-3 {
+            bottom: 20%;
+            left: 10%;
+            animation: float 9s ease-in-out infinite 2s;
+        }
+
+        .bt21-4 {
+            bottom: 15%;
+            right: 7%;
+            animation: float 10s ease-in-out infinite 3s;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0) rotate(0deg); }
+        }
+
+        .audio-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+
+        .audio-player p {
+            margin: 0 10px 0 0;
+            font-size: 0.9rem;
+            color: #6A5ACD;
+        }
+
+        .heart-pulse {
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            .nav-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .message-box {
+                margin: 40px 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- BT21 Floating Characters -->
+    <img src="./imagenes/koya-removebg-preview.png" alt="BT21 Koya" class="floating-bt21 bt21-1">
+    <img src="./imagenes/shooky-removebg-preview.png" alt="BT21 Shooky" class="floating-bt21 bt21-2">
+    <img src="./imagenes/tata-removebg-preview.png" alt="BT21 Tata" class="floating-bt21 bt21-3">
+    <img src="./imagenes/cooky-removebg-preview.png" alt="BT21 Cooky" class="floating-bt21 bt21-4">
+
+    <div class="main-container">
+        <div class="header">
+            <h1>Para Ti, Mi Amor <span class="heart-pulse">💜</span></h1>
+            <p>Un regalo desde mi corazón hasta el tuyo</p>
+        </div>
+
+        <div class="nav-cards">
+            <a href="nuestra-historia.html" class="nav-card">
+                <img src="./imagenes/28Feb2024.jpg" alt="Fotos juntos">
+                <h2>Nuestra Historia</h2>
+                <p>Un viaje cronológico por nuestros momentos más especiales juntos.</p>
+            </a>
+            
+            <a href="tu-ante-mis-ojos.html" class="nav-card">
+                <img src="./imagenes/Est14.jpg" alt="Tu ante mis ojos">
+                <h2>Tú Ante Mis Ojos</h2>
+                <p>Lo que veo cuando te miro y todo lo que significas para mí.</p>
+            </a>
+        </div>
+
+        <div class="message-box">
+            <h2>Una Carta Para Ti</h2>
+            <p>Mi amor,</p>
+            <p>Quería regalarte algo especial, algo que naciera desde lo más profundo de mi corazón y pudiera decirte, sin palabras, lo mucho que significas para mí.</p>
+            <p>Cada detalle en este pequeño rincón fue pensado con amor, recordando tu risa, tu voz, la forma en que miras el mundo y cómo haces que todo a tu alrededor cobre más sentido. No hay un solo día en el que no me sienta agradecido por tenerte en mi vida.</p>
+            <p>Eres esa calma que necesito, la alegría que me inspira, y el amor que me da fuerza. Este espacio es solo un reflejo de todo lo que siento por ti: ternura, gratitud, admiración y un cariño que crece con cada momento que compartimos.</p>
+            <p>Espero que al leer esto sientas un poco de todo lo que llevo dentro. Porque si pudiera, te regalaría el universo entero… pero por ahora, te entrego esto, con todo mi corazón</p>
+            <p>Con todo mi amor,</p>
+            <p>Adrián (Tu Amor - Tu Pollito)</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Hecho con mucho amor para ti 💜 - 2025</p>
+    </div>
+</body>
+</html>

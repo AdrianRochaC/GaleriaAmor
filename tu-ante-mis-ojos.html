@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tú Ante Mis Ojos ❤️ - Lo Que Veo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #9370DB, #D8BFD8);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            background-color: rgba(100, 50, 180, 0.8);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .nav-link {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .nav-link.active {
+            background-color: white;
+            color: #8A2BE2;
+        }
+
+        .content-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .tribute-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tribute-card h2 {
+            color: #8A2BE2;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .tribute-card .message {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .tribute-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .tribute-images {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .tribute-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .tribute-image:hover {
+            transform: scale(1.05);
+        }
+
+        .tribute-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .highlight {
+            color: #8A2BE2;
+            font-weight: 600;
+        }
+
+        .bt21-accent {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .accent-1 {
+            top: -20px;
+            right: -20px;
+        }
+
+        .accent-2 {
+            bottom: -20px;
+            left: -20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(100, 50, 180, 0.8);
+            color: white;
+            margin-top: 40px;
+        }
+
+        .heart-shape {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            margin: 30px auto;
+        }
+        
+        .heart-shape:before,
+        .heart-shape:after {
+            content: "";
+            position: absolute;
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: rgba(138, 43, 226, 0.7);
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        
+        .heart-shape:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        .photo-frame {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 8px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            overflow: hidden;
+            margin: 0 auto 30px;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            text-align: right;
+            color: #8A2BE2;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .tribute-card {
+                padding: 20px;
+            }
+            .tribute-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tribute-images {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tribute-image {
+                width: 80%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Tú Ante Mis Ojos</h1>
+        <p>Lo que veo cuando te miro 💜</p>
+    </div>
+
+    <div class="navigation">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="nuestra-historia.html" class="nav-link">Nuestra Historia</a>
+        <a href="tu-ante-mis-ojos.html" class="nav-link active">Tú Ante Mis Ojos</a>
+    </div>
+
+    <div class="content-container">
+        <div class="photo-frame">
+            <img src="./imagenes/Est16.jpg" alt="Tu foto especial">
+        </div>
+
+        <div class="tribute-card">
+            <img src="./imagenes/tata-removebg-preview.png" alt="Decorativo" class="bt21-accent accent-1">
+            <h2>Tus Ojos</h2>
+            <p class="message">"En tus ojos veo galaxias enteras..."</p>
+            <p>Cuando te miro a los ojos, veo el universo entero. Esos ojos que han reflejado amor, alegría y ternura. Los que me han dado consuelo en los días difíciles y han brillado en los momentos más felices. En ellos encuentro un lenguaje que solo tú y yo entendemos.</p>
+            
+            <div class="tribute-images">
+                <div class="tribute-image">
+                    <img src="imagenes/Est19.jpg" alt="Tus ojos">
+                </div>
+                <div class="tribute-image">
+                    <img src="imagenes/Est21.jpeg" alt="Tu mirada">
+                </div>
+            </div>
+            
+            <p>Me pierdo en la profundidad de tu mirada, donde encuentro <span class="highlight">paz y hogar</span>.</p>
+        </div>        
+
+        <div class="tribute-card">
+            <img src="./imagenes/koya-removebg-preview.png" alt="Decorativo" class="bt21-accent accent-2">
+            <h2>Tu Sonrisa</h2>
+            <p class="message">"Tu sonrisa es mi momento favorito del día..."</p>
+            <p>Ver tu sonrisa es como presenciar el amanecer después de una larga noche. Tiene el poder de transformar lo cotidiano en algo especial. Esa sonrisa que aparece incluso en medio del cansancio, la que me da fuerzas y me recuerda que todo estará bien.</p>
+            
+            <div class="tribute-images">
+                <div class="tribute-image">
+                    <img src="imagenes/Est18.jpg" alt="Tu sonrisa">
+                </div>
+                <div class="tribute-image">
+                    <img src="imagenes/Est14.jpg" alt="Momentos de alegría">
+                </div>
+            </div>
+            
+            <p>Cada vez que sonríes, me recuerdas por qué <span class="highlight">me enamoré de ti</span>. Es mi imagen favorita en el mundo, la que guardo para los días difíciles.</p>
+        </div>        
+
+        <div class="tribute-card">
+            <img src="./imagenes/shooky-removebg-preview.png" alt="Decorativo" class="bt21-accent accent-1">
+            <h2>Tu Corazón</h2>
+            <p class="message">"Tu corazón es el lugar más hermoso que conozco..."</p>
+            <p>Lo que más admiro de ti es la bondad que llevas dentro. La forma en que te entregas a los demás sin esperar nada a cambio. Cómo abrazas a quienes amas con ternura, con paciencia, con esa calidez que sana. Tu esencia es luz para todos los que te rodean.</p>
+            
+            <div class="tribute-images">
+                <div class="tribute-image">
+                    <img src="imagenes/Est12.jpg" alt="Tu bondad">
+                </div>
+                <div class="tribute-image">
+                    <img src="imagenes/Est10.jpg" alt="Tu amor">
+                </div>
+            </div>
+            
+            <p>Me has enseñado a ser mejor persona, a ver el mundo con más <span class="highlight">compasión y empatía</span>. Tu corazón es mi refugio favorito.</p>
+        </div>        
+
+        <div class="tribute-card">
+            <img src="./imagenes/mang-removebg-preview.png" alt="Decorativo" class="bt21-accent accent-2">
+            <h2>Tus Pasiones</h2>
+            <p class="message">"Tu entusiasmo ilumina todo lo que tocas..."</p>
+            <p>Admiro la forma en que te entregas a lo que amas. Cuando hablas de tus sueños, tus intereses, tus momentos favoritos, todo se llena de energía. Hay un brillo especial en ti cuando haces lo que disfrutas. Esa autenticidad tuya es mágica.</p>
+            
+            <div class="tribute-images">
+                <div class="tribute-image">
+                    <img src="imagenes/Est22.jpeg" alt="Tus pasiones">
+                </div>
+                <div class="tribute-image">
+                    <img src="imagenes/Est23.jpeg" alt="Tu entusiasmo">
+                </div>
+            </div>
+            
+            <p>Tu pasión me inspira a ser <span class="highlight">más dedicado</span> en lo que amo. Me has mostrado que es hermoso querer algo con toda el alma.</p>
+        </div>        
+
+        <div class="tribute-card">
+            <img src="./imagenes/rj-removebg-preview.png" alt="BT21 RJ" class="bt21-accent accent-1">
+            <h2>Tu Inteligencia</h2>
+            <p class="message">"Tu mente brilla tanto como tu corazón..."</p>
+            <p>Me asombra cómo siempre encuentras las palabras correctas, las soluciones más creativas y las ideas más bonitas. Tu forma de pensar me inspira, me reta y me enamora más cada día. Tienes una luz propia que se nota incluso en tus silencios.</p>
+            
+            <div class="tribute-images">
+                <div class="tribute-image">
+                    <img src="imagenes/Est11.jpg" alt="Tu mente brillante">
+                </div>
+                <div class="tribute-image">
+                    <img src="imagenes/Est8.jpg" alt="Pensativa">
+                </div>
+            </div>
+            
+            <p>Gracias por enseñarme tanto, por compartir tus ideas y por mostrarme que la <span class="highlight">sabiduría también puede ser dulce</span>.</p>
+        </div>
+        
+
+        <div class="tribute-card">
+            <img src="./imagenes/cooky-removebg-preview.png" alt="BT21 Cooky" class="bt21-accent accent-2">
+            <h2>Tu Ternura</h2>
+            <p class="message">"Tu dulzura acaricia mi alma..."</p>
+            <p>Hay algo en ti que simplemente abriga el corazón. Tus gestos, tus palabras suaves, la forma en la que cuidas y das amor. Me haces sentir en casa con solo una caricia, una mirada o un "te quiero" dicho bajito.</p>
+            
+            <div class="tribute-images">
+                <div class="tribute-image">
+                    <img src="imagenes/Est3.jpg" alt="Dulzura">
+                </div>
+                <div class="tribute-image">
+                    <img src="imagenes/Est7.jpg" alt="Gestos de amor">
+                </div>
+            </div>
+            
+            <p>Tu ternura me recuerda cada día que el amor está en los <span class="highlight">detalles más pequeños</span>.</p>
+        </div>
+        
+
+        <div class="tribute-card">
+            <img src="./imagenes/mang-removebg-preview.png" alt="BT21 Mang" class="bt21-accent accent-1">
+            <h2>Tu Alegría</h2>
+            <p class="message">"Contigo, incluso los días grises tienen colores..."</p>
+            <p>Tu risa tiene un poder mágico: transforma cualquier momento. Me encanta cómo haces brillar todo con tu buena energía, cómo contagias felicidad hasta en los días difíciles. Estar contigo es como vivir en un lugar donde siempre es primavera.</p>
+            
+            <div class="tribute-images">
+                <div class="tribute-image">
+                    <img src="imagenes/Est15.jpg" alt="Tu alegría">
+                </div>
+                <div class="tribute-image">
+                    <img src="imagenes/Est16.jpg" alt="Risas juntos">
+                </div>
+            </div>
+            
+            <p>Gracias por llenar mi vida de <span class="highlight">colores, música y sonrisas</span>. No sabes cuánto lo valoro.</p>
+        </div>
+        
+
+        <div class="tribute-card">
+            <img src="./imagenes/chimmy-removebg-preview.png" alt="BT21 Chimmy" class="bt21-accent accent-2">
+            <h2>Tu Magia</h2>
+            <p class="message">"No sé cómo lo haces, pero haces todo mejor..."</p>
+            <p>Hay una magia en ti que no sé explicar. Está en cómo hablas, cómo tocas mi alma sin necesidad de palabras, cómo transformas lo simple en algo memorable. Eres mi lugar seguro, mi chispa de esperanza, mi milagro cotidiano.</p>
+            
+            <div class="tribute-images">
+                <div class="tribute-image">
+                    <img src="imagenes/Est17.jpg" alt="Tu esencia">
+                </div>
+                <div class="tribute-image">
+                    <img src="imagenes/Est4.jpg" alt="Magia pura">
+                </div>
+            </div>
+            
+            <p>Si la vida es un viaje, entonces tú eres <span class="highlight">la parte más bonita del camino</span>.</p>
+        </div>        
+
+        <div class="tribute-card">
+            <img src="./imagenes/tata-removebg-preview.png" alt="BT21 Tata" class="bt21-accent accent-1">
+            <h2>Tu Fortaleza</h2>
+            <p class="message">"Tu fuerza me inspira a nunca rendirme..."</p>
+            <p>He visto cómo enfrentas los días difíciles con valentía, cómo no dejas que nada ni nadie apague tu luz. Admiro la forma en que te mantienes firme, incluso cuando el mundo pesa. Eres fuerte, incluso cuando no te das cuenta, y eso es lo que más me conmueve.</p>
+            
+            <div class="tribute-images">
+                <div class="tribute-image">
+                    <img src="imagenes/Est1.jpg" alt="Fuerza interior">
+                </div>
+                <div class="tribute-image">
+                    <img src="imagenes/Est9.jpg" alt="Tu valentía">
+                </div>
+            </div>
+            
+            <p>Tu fortaleza me enseña a ser <span class="highlight">más valiente y resiliente</span>. Eres mi ejemplo, mi inspiración constante.</p>
+        </div>        
+
+        <div class="heart-shape"></div>
+
+        <div class="tribute-card">
+            <h2>Lo Que Significas Para Mí</h2>
+            <p class="message">"Eres mi razón, mi inspiración, mi todo..."</p>
+            <p>Has transformado mi vida de formas que nunca imaginé posibles. Desde que llegaste, todo tiene más sentido. Tu presencia me llena de paz, tu voz me da fuerzas, y tu amor me inspira a ser una mejor versión de mí cada día. Me has enseñado lo que es amar de verdad, sin condiciones.</p>
+            
+            <div class="tribute-images">
+                <div class="tribute-image">
+                    <img src="imagenes/Est13.jpg" alt="Nosotros juntos">
+                </div>
+                <div class="tribute-image">
+                    <img src="imagenes/Est24.jpeg" alt="Nuestro amor">
+                </div>
+            </div>
+            
+            <p>Cada día contigo es un regalo, un nuevo capítulo en esta hermosa historia que estamos escribiendo juntos. Gracias por ser el centro de mi vida, por tu ternura, tu paciencia y tu forma única de amar. Eres mi hogar.</p>
+            
+            <div class="signature">Con todo mi amor, Adrián (Tu Amor - Tu Pollito)</div>
+        </div>        
+    </div>
+
+    <div class="footer">
+        <p>Hecho con mucho amor para ti 💜 - 2025</p>
+    </div>
+
+    <script>
+        // Script para manejar la carga de imágenes faltantes
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img');
+            
+            images.forEach(img => {
+                img.onerror = function() {
+                    // Si una imagen no carga, mostrar una imagen de respaldo
+                    this.src = '/api/placeholder/' + this.width + '/' + this.height;
+                    // También se podría usar una imagen local de respaldo
+                    // this.src = 'imagenes/placeholder.jpg';
+                };
+            });
+        });
+    </script>
+</body>
+</html>

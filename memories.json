@@ -1,0 +1,230 @@
+[
+    {
+      "id": 1,
+      "date": "29 de Octubre, 2022",
+      "image": "./imagenes/29Oct2022.jpg",
+      "message": "Nuestra primera salida juntos a uno de los parques de diversiones que amamos."
+    },
+    {
+      "id": 2,
+      "date": "29 de Octubre, 2022",
+      "image": "./imagenes/29Oct2022(2).jpg",
+      "message": "Una de nuetras primeras salidas juntos con muchisimo significado para ambos."
+    },
+    {
+      "id": 3,
+      "date": "31 de Octubre, 2022",
+      "image": "./imagenes/31Oct2022.jpg",
+      "message": "Primer Halloween de nustra historia juntos (uno de muchos)."
+    },
+    {
+      "id": 4,
+      "date": "3 de Diciembre, 2022",
+      "image": "./imagenes/3Dic2022.jpg",
+      "message": "Nuestro primer logro juntos, donde nos pudimos acompañar y saber que somos un apoyo mutuo."
+    },
+    {
+      "id": 5,
+      "date": "4 de Diciembre, 2022",
+      "image": "./imagenes/4Dic2022.jpg",
+      "message": "Desde el inicio estuvimos juntos uno al lado del otro siempre apoyandonos y siendo uno."
+    },
+    {
+      "id": 6,
+      "date": "13 de Diciembre, 2022",
+      "image": "./imagenes/13Dic2022.jpg",
+      "message": "Cuando nos volvimos a ver despues de graduarnos, nuestras primeras salidas a cine."
+    },
+    {
+      "id": 7,
+      "date": "22 de Diciembre, 2022",
+      "image": "./imagenes/22Dic2022.jpg",
+      "message": "Uno de nuestros primeros meses (el quinto mes), donde me diste uno de los regalos mas hermosos y significativos."
+    },
+    {
+      "id": 8,
+      "date": "31 de Diciembre, 2022",
+      "image": "./imagenes/31Dic2022.jpg",
+      "message": "Nuestro primer fin de año juntos, aunque fue un ratico, compartir ese dia contigo es algo muy especial para mi."
+    },
+    {
+      "id": 9,
+      "date": "5 de Enero, 2023",
+      "image": "./imagenes/5Ene2023.jpg",
+      "message": "La primera vez que fuimos a una piscina juntos, y pudimos compartir en un escenario diferente la habitual."
+    },
+    {
+      "id": 10,
+      "date": "1 de Marzo, 2023",
+      "image": "./imagenes/1Mar2023.jpg",
+      "message": "Siempre me ha encantado salir contigo y poder compartir juntos diferentes cosas, es la mejor sesación del mundo."
+    },
+    {
+      "id": 11,
+      "date": "22 de Mayo, 2023",
+      "image": "./imagenes/22May2023.jpg",
+      "message": "Nuestra primera salida a un parque donde pudimos estar juntos y disfrutar de muchas cosas diferentes a las anteriores."
+    },
+    {
+      "id": 12,
+      "date": "22 de Septiembre, 2023",
+      "image": "./imagenes/22Sep2023.jpg",
+      "message": "Un dia en la universidad, donde pudimos estar juntos y poder tomarnos una fotito con la hermanita de Haru."
+    },
+    {
+      "id": 13,
+      "date": "26 de Octubre, 2023",
+      "image": "./imagenes/26Oct2023.jpg",
+      "message": "Siempre mundo aventura sera el lugar donde mas recuerdo el comienzo de todo, y donde siempre sere feliz de ir contigo."
+    },
+    {
+      "id": 14,
+      "date": "31 de Octubre, 2023",
+      "image": "./imagenes/31Oct2023.jpg",
+      "message": "Nuestro primer Halloween juntos, donde ame poder hacer un disfraz compartido contigo amor."
+    },
+    {
+      "id": 15,
+      "date": "4 de Noviembre, 2023",
+      "image": "./imagenes/4Nov2023.jpg",
+      "message": "Aunque hemos ido varias veces, jamas me cansare de ir contigo a poder disfrutar juntos a mundo aventura."
+    },
+    {
+      "id": 16,
+      "date": "11 de Noviembre, 2023",
+      "image": "./imagenes/11Nov2023.jpg",
+      "message": "Una de las veces que nos vestiamos y combinabamos la ropa juntos, siempre fue algo muy especial."
+    },
+    {
+      "id": 17,
+      "date": "17 de Noviembre, 2023",
+      "image": "./imagenes/17Nov2023.jpg",
+      "message": "Siempre cada día a tu lado es muy lindo y especial, aunque sea solo en la universidad el tiempo que paso contigo siempre sera muy valioso."
+    },
+    {
+      "id": 18,
+      "date": "23 de Diciembre, 2024",
+      "image": "./imagenes/23Dic2023.jpg",
+      "message": "Una de nuestras salidas a cine, que sin importar que siempre son unas de las mejores donde podemos ser felices juntos."
+    },
+    {
+      "id": 19,
+      "date": "13 de Enero, 2024",
+      "image": "./imagenes/13Ene2024.jpg",
+      "message": "Nuestra primera salida del año 2024, donde salimos juntos y esta vez un poco mas comodos, donde estuvimos felices."
+    },
+    {
+      "id": 20,
+      "date": "13 de Enero, 2024",
+      "image": "./imagenes/13Ene2024(2).jpg",
+      "message": "Tomarnos fotos juntos siempre me ha encantado, aunque no soy amante a las fotos; siempre he amado las fotos a tu lado."
+    },
+    {
+      "id": 21,
+      "date": "13 de Enero, 2024",
+      "image": "./imagenes/13Ene2024(3).jpg",
+      "message": "Nuestra primera foto astetik."
+    },
+    {
+      "id": 22,
+      "date": "13 de Febrero, 2024",
+      "image": "./imagenes/13Feb2023.jpg",
+      "message": "Aunque fuera solo a estudiar, amo poder verte y estar contigo."
+    },
+    {
+      "id": 23,
+      "date": "28 de Febrero, 2024",
+      "image": "./imagenes/28Feb2024.jpg",
+      "message": "Poder acompañarte en tu cumpleaños, el segundo desde que empezamos, poder tener esa oportunidad es la mejor del mundo."
+    },
+    {
+      "id": 24,
+      "date": "28 de Febrero, 2024",
+      "image": "./imagenes/28Feb2024(2).jpg",
+      "message": "Verte feliz en tu cumpleaños, poder estar en cada paso que das en tu vida es el regalo mas hermoso que la vida pudo darme."
+    },
+    {
+      "id": 25,
+      "date": "28 de Marzo, 2024",
+      "image": "./imagenes/28Mar2024.jpg",
+      "message": "El lugar donde todo empezo, siempre es muy hermoso poder ir juntos al parque."
+    },
+    {
+      "id": 26,
+      "date": "28 de Abril, 2024",
+      "image": "./imagenes/28Abr2024.jpg",
+      "message": "Ver tu cara de felicidad, y poder compartir juntos es lo mejor."
+    },
+    {
+      "id": 27,
+      "date": "2 de Junio, 2024",
+      "image": "./imagenes/2Jun2024.jpg",
+      "message": "La primera vez que asistimos a un matrimonio juntos."
+    },
+    {
+      "id": 28,
+      "date": "4 de Junio, 2024",
+      "image": "./imagenes/4Jun2024.jpg",
+      "message": "Una de las muchas veces que fui a tu casa y siempre es muy lindo poder estar en tu casa amor y poder compartir es algo muy hermoso."
+    },
+    {
+      "id": 29,
+      "date": "14 de Julio, 2024",
+      "image": "./imagenes/14Jul2024.jpg",
+      "message": "Nuestra primer salida juntos de paseo para celebrar uno de nuestros aniversarios."
+    },
+    {
+      "id": 30,
+      "date": "14 de Julio, 2024",
+      "image": "./imagenes/14Jul2024(2).jpg",
+      "message": "Poder compartir un paseo y una experiencia nueva juntos y con tu familia, fue uno de los mejores dias de mi vida."
+    },
+    {
+      "id": 31,
+      "date": "14 de Julio, 2024",
+      "image": "./imagenes/14Jul2024(3).jpg",
+      "message": "Es muy hermoso saber que pudimos compartir un paseo pequeño, o una salida fuera de bogota juntos."
+    },
+    {
+      "id": 32,
+      "date": "23 de Julio, 2024",
+      "image": "./imagenes/23Jul2024.jpg",
+      "message": "Poder estar juntos y poder compartir con tu sobrino es algo muy lindo que he podido hacer."
+    },
+    {
+      "id": 33,
+      "date": "1 de Septiembre, 2024",
+      "image": "./imagenes/1Sep2024.jpg",
+      "message": "Uno de los dias donde estuvimos juntos en una reunion de mi familia, donde pudimos compartir."
+    },
+    {
+      "id": 34,
+      "date": "11 de Octubre, 2024",
+      "image": "./imagenes/11Oct2024.jpg",
+      "message": "Ir al SOFA fue algo que hice por primera vez contigo y algo que siempre querre hacer a tu lado, es una de las experiencias mas cheveres juntos, saber como no servimos para ahorrar."
+    },
+    {
+      "id": 35,
+      "date": "31 de Octubre, 2024",
+      "image": "./imagenes/31Oct2024.jpg",
+      "message": "El primer Halloween donde pudimos arreglarnos juntos y poder estar juntos en ese dia."
+    },
+    {
+      "id": 36,
+      "date": "31 de Octubre, 2024",
+      "image": "./imagenes/31Oct2024(2).jpg",
+      "message": "Amo poder pasar halloween con la persona a la que amo."
+    },
+    {
+      "id": 37,
+      "date": "28 de Noviembre, 2024",
+      "image": "./imagenes/28Nov2024.jpg",
+      "message": "Una de nuestras salidas donde aunque no sea economico podemos pasarla muy bien juntos amor."
+    },
+    {
+      "id": 38,
+      "date": "31 de Marzo, 2025",
+      "image": "./imagenes/31Mar2025.jpg",
+      "message": "Siempre has significado mucho para mi, aun faltan muchas mas cosas a nuestra historia, muchos mas momentos, mas chocoaventuras y diferentes cosas. \n Siempre seras las paginas mas importantes del libro de mi vida."
+    }
+  ]
