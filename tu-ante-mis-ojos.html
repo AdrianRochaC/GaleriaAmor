@@ -430,7 +430,7 @@
             
             <p>Cada día contigo es un regalo, un nuevo capítulo en esta hermosa historia que estamos escribiendo juntos. Gracias por ser el centro de mi vida, por tu ternura, tu paciencia y tu forma única de amar. Eres mi hogar.</p>
             
-            <div class="signature">Con todo mi amor, Adrián (Tu Amor - Tu Pollito)</div>
+            <div class="signature">Con todo mi amor, Adrián (Tu Novio)</div>
         </div>        
     </div>
 
@@ -439,16 +439,12 @@
     </div>
 
     <script>
-        // Script para manejar la carga de imágenes faltantes
         document.addEventListener('DOMContentLoaded', function() {
             const images = document.querySelectorAll('img');
             
             images.forEach(img => {
                 img.onerror = function() {
-                    // Si una imagen no carga, mostrar una imagen de respaldo
                     this.src = '/api/placeholder/' + this.width + '/' + this.height;
-                    // También se podría usar una imagen local de respaldo
-                    // this.src = 'imagenes/placeholder.jpg';
                 };
             });
         });
