@@ -7,21 +7,38 @@
   <style>
     body {
       margin: 0;
-      background: radial-gradient(ellipse at center, #0b0c2a 0%, #000000 100%);
-      overflow: hidden;
+      background: #000;
       font-family: 'Poppins', sans-serif;
       color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .background-image {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 700px;
+      height: 700px;
+      background: url('./imagenes/a219837a-5d21-45db-bb14-db6549bcd7de.png') no-repeat center center;
+      background-size: cover;
+      transform: translate(-50%, -50%);
+      opacity: 0.3;
+      border-radius: 50%;
+      z-index: 0;
+      box-shadow: 0 0 80px 20px #6e40c9aa;
     }
 
     .star {
       position: absolute;
-      width: 12px;
-      height: 12px;
+      width: 10px;
+      height: 10px;
       background: #ffffff;
       border-radius: 50%;
       cursor: pointer;
-      box-shadow: 0 0 8px #fff;
+      box-shadow: 0 0 6px #fff;
       transition: transform 0.2s;
+      z-index: 1;
     }
 
     .star:hover {
@@ -30,9 +47,10 @@
 
     .line {
       position: absolute;
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.25);
       height: 2px;
       transform-origin: left center;
+      z-index: 0;
     }
 
     .message-box {
@@ -48,29 +66,36 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
       font-size: 1.1rem;
       text-align: center;
+      z-index: 2;
     }
 
     .title {
       text-align: center;
-      margin-top: 40px;
-      font-size: 2rem;
+      margin-top: 20px;
+      font-size: 2.2rem;
       color: #e0caff;
+      z-index: 2;
+      position: relative;
     }
   </style>
 </head>
 <body>
+
+  <div class="background-image"></div>
 
   <div class="title">✨ Mi constelación favorita... Tú ✨</div>
   <div class="message-box" id="message">Haz clic en una estrella para ver lo que siento ✨</div>
 
   <script>
     const stars = [
-      { x: 100, y: 200, message: "Eres mi paz en medio del caos." },
-      { x: 300, y: 100, message: "Tu risa es mi sonido favorito." },
-      { x: 500, y: 250, message: "Desde que llegaste, todo brilla más." },
-      { x: 700, y: 180, message: "Tu mirada tiene el poder de calmarme." },
-      { x: 900, y: 300, message: "Amarte es la decisión más fácil que he tomado." },
-      { x: 600, y: 400, message: "Cada día contigo es un regalo del universo." },
+      { x: 300, y: 300, message: "Eres mi paz en medio del caos." },
+      { x: 380, y: 240, message: "Tu risa es mi sonido favorito." },
+      { x: 460, y: 320, message: "Desde que llegaste, todo brilla más." },
+      { x: 540, y: 280, message: "Tu mirada tiene el poder de calmarme." },
+      { x: 600, y: 360, message: "Amarte es la decisión más fácil que he tomado." },
+      { x: 480, y: 400, message: "Cada día contigo es un regalo del universo." },
+      { x: 370, y: 400, message: "Tus abrazos curan todo en mí." },
+      { x: 430, y: 460, message: "Eres mi constelación preferida desde 22/07/22." }
     ];
 
     const container = document.body;
@@ -86,7 +111,6 @@
       };
       container.appendChild(starEl);
 
-      // Draw lines to the next star (like a constelation)
       if (index < stars.length - 1) {
         const next = stars[index + 1];
         const dx = next.x - star.x;
