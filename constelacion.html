@@ -184,47 +184,71 @@
   <div class="background-stars" id="backgroundStars"></div>
   <div class="background-image"></div>
   
-  <div class="title">✨ Mi Constelación del Amor ✨</div>
+  <div class="title">⭐ Mi Constelación del Amor ⭐</div>
   <div class="date-stamp">22 de Julio, 2022 - 7:05 PM</div>
   
   <div class="message-box" id="message">
-    Haz clic en cualquier estrella para descubrir lo que siento por ti ✨
+    Haz clic en cualquier estrella para descubrir lo que siento por ti ⭐
   </div>
 
   <script>
-    // Constelación principal en forma de corazón con más estrellas
+    // Constelación principal centrada y elegante
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    
     const constellationStars = [
-      // Corazón principal
-      { x: 400, y: 200, type: 'main', message: "Eres la estrella más brillante en mi universo." },
-      { x: 350, y: 180, type: 'secondary', message: "Tu amor ilumina cada rincón de mi alma." },
-      { x: 450, y: 180, type: 'secondary', message: "Desde el 22/07/2022, mi vida cambió para siempre." },
-      { x: 320, y: 220, type: 'minor', message: "Tu sonrisa es mi constelación favorita." },
-      { x: 480, y: 220, type: 'minor', message: "Cada momento contigo es mágico." },
-      { x: 300, y: 280, type: 'secondary', message: "Eres mi paz en medio de cualquier tormenta." },
-      { x: 500, y: 280, type: 'secondary', message: "Tu abrazo es mi hogar." },
-      { x: 320, y: 340, type: 'minor', message: "Tu risa es la música más hermosa." },
-      { x: 480, y: 340, type: 'minor', message: "Amarte es la aventura más bella." },
-      { x: 360, y: 380, type: 'secondary', message: "Tus ojos son mi cielo estrellado." },
-      { x: 440, y: 380, type: 'secondary', message: "Contigo, cada día es extraordinario." },
-      { x: 400, y: 420, type: 'main', message: "Mi amor por ti es infinito como las estrellas." },
+      // Estrella central principal
+      { x: centerX, y: centerY, type: 'main', message: "Eres la estrella más brillante en mi universo." },
       
-      // Estrellas adicionales para formar una constelación más compleja
-      { x: 280, y: 150, type: 'minor', message: "Eres mi inspiración diaria." },
-      { x: 520, y: 150, type: 'minor', message: "Tu amor me hace mejor persona." },
-      { x: 250, y: 250, type: 'minor', message: "Eres mi sueño hecho realidad." },
-      { x: 550, y: 250, type: 'minor', message: "Tu corazón es mi lugar favorito." },
-      { x: 200, y: 320, type: 'minor', message: "Eres mi complemento perfecto." },
-      { x: 600, y: 320, type: 'minor', message: "Tu amor es mi fortaleza." },
-      { x: 280, y: 450, type: 'minor', message: "Juntos somos invencibles." },
-      { x: 520, y: 450, type: 'minor', message: "Eres mi para siempre." }
+      // Anillo interior
+      { x: centerX - 80, y: centerY - 60, type: 'secondary', message: "Tu amor ilumina cada rincón de mi alma." },
+      { x: centerX + 80, y: centerY - 60, type: 'secondary', message: "Desde el 22/07/2022, mi vida cambió para siempre." },
+      { x: centerX + 100, y: centerY, type: 'secondary', message: "Tu sonrisa es mi constelación favorita." },
+      { x: centerX + 80, y: centerY + 60, type: 'secondary', message: "Cada momento contigo es mágico." },
+      { x: centerX - 80, y: centerY + 60, type: 'secondary', message: "Eres mi paz en medio de cualquier tormenta." },
+      { x: centerX - 100, y: centerY, type: 'secondary', message: "Tu abrazo es mi hogar." },
+      
+      // Anillo exterior
+      { x: centerX - 150, y: centerY - 120, type: 'minor', message: "Tu risa es la música más hermosa." },
+      { x: centerX, y: centerY - 140, type: 'minor', message: "Amarte es la aventura más bella." },
+      { x: centerX + 150, y: centerY - 120, type: 'minor', message: "Tus ojos son mi cielo estrellado." },
+      { x: centerX + 170, y: centerY - 40, type: 'minor', message: "Contigo, cada día es extraordinario." },
+      { x: centerX + 170, y: centerY + 40, type: 'minor', message: "Mi amor por ti es infinito como las estrellas." },
+      { x: centerX + 150, y: centerY + 120, type: 'minor', message: "Eres mi inspiración diaria." },
+      { x: centerX, y: centerY + 140, type: 'minor', message: "Tu amor me hace mejor persona." },
+      { x: centerX - 150, y: centerY + 120, type: 'minor', message: "Eres mi sueño hecho realidad." },
+      { x: centerX - 170, y: centerY + 40, type: 'minor', message: "Tu corazón es mi lugar favorito." },
+      { x: centerX - 170, y: centerY - 40, type: 'minor', message: "Eres mi complemento perfecto." },
+      
+      // Estrellas adicionales para dar profundidad
+      { x: centerX - 60, y: centerY - 100, type: 'minor', message: "Tu amor es mi fortaleza." },
+      { x: centerX + 60, y: centerY - 100, type: 'minor', message: "Juntos somos invencibles." },
+      { x: centerX + 120, y: centerY - 30, type: 'minor', message: "Eres mi para siempre." },
+      { x: centerX + 120, y: centerY + 30, type: 'minor', message: "Eres mi hogar." },
+      { x: centerX + 60, y: centerY + 100, type: 'minor', message: "Mi alma reconoce a la tuya." },
+      { x: centerX - 60, y: centerY + 100, type: 'minor', message: "Eres mi destino." },
+      { x: centerX - 120, y: centerY + 30, type: 'minor', message: "Tu amor es mi guía." },
+      { x: centerX - 120, y: centerY - 30, type: 'minor', message: "Eres mi universo completo." }
     ];
 
-    // Conexiones para formar la constelación
+    // Conexiones para formar una constelación circular elegante
     const connections = [
-      [0, 1], [0, 2], [1, 3], [2, 4], [3, 5], [4, 6],
-      [5, 7], [6, 8], [7, 9], [8, 10], [9, 11], [10, 11],
-      [12, 1], [13, 2], [14, 5], [15, 6], [16, 9], [17, 10],
-      [18, 9], [19, 10], [0, 11]
+      // Conexiones desde el centro
+      [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6],
+      
+      // Anillo interior
+      [1, 2], [2, 3], [3, 4], [4, 5], [5, 6], [6, 1],
+      
+      // Conexiones al anillo exterior
+      [1, 7], [1, 16], [2, 8], [2, 17], [3, 9], [3, 18],
+      [4, 10], [4, 19], [5, 11], [5, 20], [6, 12], [6, 21],
+      
+      // Anillo exterior
+      [7, 8], [8, 9], [9, 10], [10, 11], [11, 12], [12, 13], 
+      [13, 14], [14, 15], [15, 16], [16, 7],
+      
+      // Conexiones adicionales para dar estructura
+      [17, 18], [18, 19], [19, 20], [20, 21], [21, 22], [22, 23], [23, 24], [24, 17]
     ];
 
     const container = document.body;
@@ -311,7 +335,7 @@
 
     // Mensaje inicial especial
     setTimeout(() => {
-      messageBox.textContent = "Una constelación creada especialmente para ti, mi amor ✨";
+      messageBox.textContent = "Una constelación creada especialmente para ti, mi amor ⭐";
     }, 2000);
   </script>
 </body>
